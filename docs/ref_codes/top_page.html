@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>アウトドアブログ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22543d",
+                        "accent": "#dd6b20",
+                        "background-light": "#f7fafc",
+                        "background-dark": "#1a202c",
+                        "text-light": "#2d3748",
+                        "text-dark": "#f7fafc",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark px-4 md:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-3xl">terrain</span>
+<h2 class="text-primary text-lg font-bold leading-tight tracking-[-0.015em]">Outdoor Blog</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-accent" href="#">ホーム</a>
+<a class="text-sm font-medium leading-normal hover:text-accent" href="#">キャンプ</a>
+<a class="text-sm font-medium leading-normal hover:text-accent" href="#">登山</a>
+<a class="text-sm font-medium leading-normal hover:text-accent" href="#">釣り</a>
+<a class="text-sm font-medium leading-normal hover:text-accent" href="#">新規投稿</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="キーワードで検索" value=""/>
+</div>
+</label>
+</div>
+<div class="flex gap-2">
+<button class="flex md:hidden min-w-[40px] max-w-[40px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2 bg-gray-100 dark:bg-gray-800 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex md:hidden min-w-[40px] max-w-[40px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2 bg-gray-100 dark:bg-gray-800 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALo36kpIqo5Wl-SLcCohsgZf4JHQzyof4mVtUut9CHuXK_sEIjot8VquMoevwIaGYLry0PsudzCp818E_pOIc56_4wI4oaHjevctK7JbYmM7E9ffzrzTNA_drIi2qkJCzqkzcZbxYKlXz-l-Ix2tofxj0eQSa1A_1zaFTc2TfJqArHmuTK_l2UqGQWFRYEgAxOQZa0IY306xQeyhyd3uVMto6HkGhF6kMehajXAeqhABmLU4qGlCbbcEEUgmxiUkNWnHgpXzxaTPMe");'></div>
+</div>
+</div>
+</header>
+<div class="px-4 md:px-10 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col lg:flex-row gap-8 max-w-7xl flex-1">
+<aside class="hidden lg:block w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-24">
+<div class="flex h-full min-h-[700px] flex-col justify-start bg-background-light dark:bg-background-dark p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+<div class="flex flex-col gap-6">
+<div>
+<h3 class="font-bold mb-2">カテゴリ</h3>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 hover:bg-primary/30" href="#">
+<span class="material-symbols-outlined text-primary">category</span>
+<p class="text-sm font-medium leading-normal">すべて</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">outdoor_grill</span>
+<p class="text-sm font-medium leading-normal">キャンプ</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">hiking</span>
+<p class="text-sm font-medium leading-normal">登山</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">phishing</span>
+<p class="text-sm font-medium leading-normal">釣り</p>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-bold mb-2">タグ</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-accent/20 text-accent text-xs font-semibold px-2.5 py-1 rounded-full">#初心者向け</span>
+<span class="bg-accent/20 text-accent text-xs font-semibold px-2.5 py-1 rounded-full">#ギア紹介</span>
+<span class="bg-accent/20 text-accent text-xs font-semibold px-2.5 py-1 rounded-full">#絶景</span>
+</div>
+</div>
+<div>
+<h3 class="font-bold mb-2">期間</h3>
+<select class="form-select w-full bg-gray-100 dark:bg-gray-800 border-none rounded-lg text-sm">
+<option>今週</option>
+<option>今月</option>
+<option>今年</option>
+</select>
+</div>
+<div>
+<h3 class="font-bold mb-2">人気記事</h3>
+<div class="flex flex-col gap-2">
+<a class="text-sm hover:underline" href="#">絶景！初めてのソロキャンプ体験記</a>
+<a class="text-sm hover:underline" href="#">ロッキー山脈のトップ5ハイキングコース</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1">
+<div class="mb-8">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[300px] md:min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-lg items-center justify-center p-4" data-alt="A scenic view of mountains at sunrise" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1Ia-JEXY97tEkJdh2okNRGN4iXt_yzKgq06NxO62wL6SgaXHkg2IzO8gTp29PbjQHtYaQNCxTRGZPLC7NO8qg9Nexp_BVmAm0ftsmPacxDO0LQWTwxkHATBU9IK15BsFro-TTp1AW2Wyda15q8aZxG2XUG9lbtovF6G5vj-AQT2m-3nRDX-6mx1_UdKpCBxvKt_eBTUyy3jSHHuKnk3PYMJKCmBlI-S2nlRUSKAlNam6MkZu6dZMQ5ZsfQdPxAKTSvhC1mkY0Svdf");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
+                                            大自然を発見しよう
+                                        </h1>
+<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base">
+                                            キャンプ、ハイキング、釣りの冒険への究極のガイド。
+                                        </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-accent hover:bg-accent/90 text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base">
+<span class="truncate">今すぐ探す</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A tent in a forest clearing." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJet5Ir-KPC3skPXFKycBW0LD6Vw1uq85qlDjrqjCH_kfKPPIZh1i5uI2a0gdP2t5qkOU9cfVOL5UuGa81-a3JRiqfqiUOdyCT4xHGJIr8BYIkCxlXTGaibXocRotEIC5TC_cPEqFnxln714yKVAJY6H4ZXarrfJGx0SDos_ifbwz-6NO8OHNHlSbE8SPVPEYh7rZ-4evE0xXyVCPL7iKqZe4E_4a0Sd23g07AI_-Sm-9f8S7HxzETV5tmjTVUACWqsFmOAR0hddZ7");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">絶景！初めてのソロキャンプ体験記</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        先日、ずっと憧れていたソロキャンプに挑戦してきました。準備から当日の様子までを詳しくレポートします…
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月27日 | Taro Yamada | キャンプ</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A hiker on a mountain trail." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3WhGGOqVp8YELpiWxlTv8KzP1xxi0cQT45_99quy1tdTOdjPBOik2z1V_SHmfo-OsY73rUMPMBCADfnAaPPvknTFLz31YSCcPEFHJi7PS0rCxlRUbBKZinhiLgWcq0Db1YGQbzHk7A6Bx-oG4xSwaWqqskt3Ge1PKH7YXpdPjvv_twRy8JZGrt23Ri9LB3LduYqtx_tvFGl3yHs2OOI9cbBlEztBrlC49UnH7hSRXtfashreq2iX0uz5N--U29OEBNvj-VcZ8-aPY");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">ロッキー山脈のトップ5ハイキングコース</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        ロッキー山脈の息をのむような景色と挑戦的な登山道を、このトップ評価のハイキングコースで発見してください。
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月22日 | Jane Doe | 登山</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A person fly fishing in a river." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWmmL3mjQcCnAffh1hU2E6aOUp6o-wQpbN0HiqlhjjshgYGZRYFZYdi93dAz0IxbFoutuLsQE1zIOc_htxIJ94pnOQfnfeZe1HHoO5Ju06xQVjmhBCIxeQxDW-s8Cf6gNB4Sxk_A4F7dFuUy5mdj_RemI7sTyMHJnV87WR3oURhj7k-wmN34zx30mSo6MYAucB0bndHLPNZG34-I7DTzFB7T5Tx3QieI9OIC2Kco-NK-PP1FspYDmFs3D5p04f0YCpQNH93yiibqcP");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">初心者向けフライフィッシングガイド</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        ギアからキャスティング技術まで、初心者向けの包括的なガイドでフライフィッシングの技術を学びましょう。
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月18日 | John Smith | 釣り</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Camping gear laid out on the ground." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbpXBMpJi6iAaAUNwMk-8gOuUl_lmvZsp0fFYCdYYzt9YWJqDfgPVZkb2InsIxsXLKNFPv9QObaO1LXHJslanTCaGbz-hhPJO1UTMD6JgwU10IRpRk5KJtP5zsjKsmM1sPPiBYrUnqNv08YSc_Sbt5kWcOmOaXXKuqIwuvFYfZvZhmn4SBQ8tCD2KqEukZqPfOw_IMchlkdWifLhkAGMNCfvJx_J0ajjyPmW8kN6Rh__bHKFpw-_mkpR258zfD27U-H0VIZ6V04Iob");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">2024年版必須キャンプギア</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        次のアウトドアアドベンチャーを快適で楽しいものにするための必須キャンプギアのリストをチェックしてください。
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月15日 | Emily White | キャンプ</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Food cooking over a campfire." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlvVmewb8N__qfcUKICwz3zsOkLPAgRVi9SMQql_QQnKkF4oVSUO0tCBK2HPIhpzQXYbqLoDtF70Nwvxgkj7zG_ADXAppppeU15M2qG8D1vE6QDMQZk9j8AD7XI7V6s3MpNDtPyVM99oKPM-W4_zfVXfDRZIdaj28Maj03CBNYwfIwuGR8AQ7xuBFVgJysFcW2ttu5xfwMs9W7Pb_yP3I0uu64gmsD0AhRgbCcBrRITMkdr33V4oBnaKQghh1_HBHqh-3OhLO6HC5g");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">焚き火で美味しい料理を作る方法</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        ホットドッグやマシュマロを超える、簡単で美味しい焚き火レシピで友達や家族を驚かせましょう。
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月10日 | Michael Brown | キャンプ</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A fisherman holding a large fish." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMHV799F2agh_zRvcTXpoiee5pK2M1h_gqR24XW7MycnYrQZRF36yejXuPVzYJfBM3fUXGTMNbukM-eC1u-cTq7x46XhfEHPXZTJZSafk_UxjY9D-YLmwjZg5AxOdX1viottQhU4b4MSU3Pg2rAhWLIKLfLlH-EFiE8-z1zW9NWEnEs2oX3oVh6wQ4R7X_Hy0G_vN_BXItXse9PlB7pl1d0Ip3EJz8QuWVb4SnTat7aD9VQouqnEuQCeEcw_Y9s5OePWTUY9uXn_UO");'></div>
+<div class="p-4">
+<p class="text-base font-bold leading-normal mb-2 text-text-light dark:text-text-dark">太平洋岸北西部の最高の釣りスポット</p>
+<p class="text-sm font-normal leading-normal text-gray-600 dark:text-gray-400 mb-3">
+                                        太平洋岸北西部の最高の釣りスポットガイドで、次の釣り場を見つけましょう。
+                                    </p>
+<p class="text-xs font-normal leading-normal text-gray-500 dark:text-gray-400">2023年10月5日 | Sarah Green | 釣り</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center p-4 mt-8">
+<a class="flex size-10 items-center justify-center" href="#">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white rounded-full bg-primary" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-text-light dark:text-text-dark rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-text-light dark:text-text-dark rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-text-light dark:text-text-dark rounded-full">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-text-light dark:text-text-dark rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">10</a>
+<a class="flex size-10 items-center justify-center" href="#">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">chevron_right</span>
+</a>
+</div>
+</main>
+</div>
+</div>
+<footer class="bg-gray-100 dark:bg-gray-800 py-8 px-4 md:px-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<p class="text-sm text-gray-600 dark:text-gray-400">© 2024 Outdoor Blog. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent" href="#">このサイトについて</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent" href="#">お問い合わせ</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent" href="#">プライバシーポリシー</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

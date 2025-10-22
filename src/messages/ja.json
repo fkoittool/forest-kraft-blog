@@ -1,0 +1,10 @@
+{
+    "Home": {
+      "title": "ようこそ",
+      "description": "これは日本語のホームページです"
+    },
+    "About": {
+      "title": "私たちについて",
+      "description": "これは日本語のAboutページです"
+    }
+}
