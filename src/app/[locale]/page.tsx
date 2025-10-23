@@ -42,7 +42,6 @@ function getPostInfo(fileName: string, locale: string|undefined): ArticleInfo | 
   if (!fs.existsSync(fullPath)) return
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-  console.log(matterResult);
   return {
     title: matterResult.data.title,
     date: matterResult.data.date.toLocaleString(),

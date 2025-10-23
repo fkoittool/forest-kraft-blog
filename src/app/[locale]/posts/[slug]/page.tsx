@@ -41,10 +41,10 @@ export async function getPostData(locale: string, slug: string) {
   const contentHtml = processedContent.toString();
 
   const post :Post = {
-    title: matterResult.data.title,
-    date: matterResult.data.date,
-    contentHtml: contentHtml,
     ...matterResult.data,
+    title: matterResult.data.title,
+    date: matterResult.data.date.toLocaleString(),
+    contentHtml: contentHtml,
   }
   return post;
 }
@@ -59,7 +59,6 @@ interface Props {
 export default async function PostPage({ params }: Props) {
   const { locale, slug } = await params;
   const postData = await getPostData(locale, slug);
-
   return (
     <article>
       <h1>{postData.title}</h1>
