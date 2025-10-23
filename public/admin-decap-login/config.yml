@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: public/img
+public_folder: img
+collections:
+  # ====== 🇯🇵 日本語コンテンツのコレクション ======
+  - name: "japanese_posts" # 内部的な名前（一意にする）
+    label: "日本語の記事"    # CMS管理画面に表示される名前
+    folder: "content/ja"     # 📝 日本語のMarkdownファイルを保存するフォルダ
+    create: true             # 新規作成を許可
+    slug: "{{slug}}"         # ファイル名に使用するテンプレート
+
+    fields: # フィールド定義は言語間で共通で問題ありません
+      - label: "タイトル (JA)"
+        name: "title"
+        widget: "string"
+      - label: "公開日"
+        name: "date"
+        widget: "datetime"
+      - label: "説明"
+        name: "description"
+        widget: "string"
+      - label: "本文 (JA)"
+        name: "body"
+        widget: "markdown"
+      # ... その他の日本語コンテンツ用フィールド
+
+  # ====== 🇺🇸 英語コンテンツのコレクション ======
+  - name: "english_posts"  # 内部的な名前（一意にする）
+    label: "English Posts" # CMS管理画面に表示される名前
+    folder: "content/en"     # 📝 英語のMarkdownファイルを保存するフォルダ
+    create: true
+    slug: "{{slug}}"
+
+    fields: # 日本語コレクションと構造を合わせることで、Next.jsでのデータ処理を共通化しやすくなります
+      - label: "Title (EN)"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Description"
+        name: "description"
+        widget: "string"
+      - label: "Body (EN)"
+        name: "body"
+        widget: "markdown"
+      # ... その他の英語コンテンツ用フィールド
